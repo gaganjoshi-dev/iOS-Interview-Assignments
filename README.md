@@ -1,2 +1,2 @@
 # Interview-Assignments
-This Repo is the track of assignment I was given in interview processes
+This repo tracks the assignments I was given in interview processes.
