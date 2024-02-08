@@ -37,6 +37,19 @@ class EventListViewModel {
 
     }
 
+    
+    /*
+     
+     class category {
+     
+     var event : [eeven]
+     var category : [Category]
+     }
+     
+     
+     */
+  
+    
     private func retrieveEvents(_ category: Category) -> [Event] {
         // Fetch all events in the concert without explicitly determining the depth
         var arrayEvents = [Event]()
