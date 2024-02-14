@@ -7,6 +7,7 @@
 import Combine
 import SwiftUI
 
+@MainActor
 class EventListViewModel: ObservableObject {
     @Published private var events: [Event] = []
     @Published private var searchedEvents: [Event] = []
@@ -28,10 +29,44 @@ class EventListViewModel: ObservableObject {
 
     private func retrieveEvents(_ category: Category) -> [Event] {
         // Fetch all events in the concert without explicitly determining the depth
-        return []
+        
+        var arrayEvents = [Event]()
+        var queue  = [Category]()
+        queue.append(category)
+        while !queue.isEmpty {
+            let currentCategory = queue.removeFirst()
+            let arrayChildren : [Category] = currentCategory.children ?? []
+            if arrayChildren.isEmpty {
+                arrayEvents.append(contentsOf: currentCategory.events ?? [])
+            }
+            else {
+                queue.append(contentsOf: arrayChildren)
+            }
+        }
+        return arrayEvents
     }
 
     func getEvents() -> [Event] {
+        
+       
         return (!searchedEvents.isEmpty) ? searchedEvents : events
+    }
+    
+    
+    func filterEvents(with text: String) async {
+
+        if !text.isEmpty {
+            
+            DispatchQueue.main.async {
+               
+                self.searchedEvents = self.events.filter { $0.name?.localizedCaseInsensitiveContains(text) == true }
+            }
+
+           
+        }
+        else {
+            searchedEvents = []
+        }
+        
     }
 }

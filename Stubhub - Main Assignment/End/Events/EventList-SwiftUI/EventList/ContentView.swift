@@ -8,11 +8,15 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = EventListViewModel()
+    @State var searchText = ""
 
     var body: some View {
         NavigationView {
             VStack {
                 List {
+                    
+                    let events = searchText.isEmpty ? viewModel.
+                    
                     ForEach(viewModel.getEvents()) { event in
                         EventRowView(event: event)
                     }
@@ -23,6 +27,12 @@ struct ContentView: View {
                 viewModel.loadEvents()
             }
         }.navigationViewStyle(.stack)
+            .searchable(text: $searchText) {
+                            Text("Search")
+                        }
+            .onChange(of: searchText) { searchText in
+                            Task { await viewModel.filterEvents(with: searchText) }
+                        }
     }
 }
 

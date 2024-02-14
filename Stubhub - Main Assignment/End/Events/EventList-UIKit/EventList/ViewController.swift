@@ -19,10 +19,10 @@ class ViewController: UIViewController {
         return tableView
     }()
     
-    let searchBar: UISearchBar = {
+    lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search"
-        // searchBar.delegate = self
+        searchBar.delegate = self
         return searchBar
     }()
     

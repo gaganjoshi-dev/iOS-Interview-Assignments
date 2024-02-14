@@ -1,6 +1,6 @@
 /*
  I had a Online interview with Wipro on 9th Feb, 2024
- Given below are the question i was asked
+ Given below are the question I was asked
  
  I said SwiftUi slower than UIKIt -> I need to be sure
  May be you adabting is swift UI Slow
@@ -91,3 +91,12 @@
 
 
 
+class SomeClass {
+    
+    static var someInt : Int = 5
+}
+
+
+SomeClass.someInt = 15
+
+print(SomeClass.someInt)
