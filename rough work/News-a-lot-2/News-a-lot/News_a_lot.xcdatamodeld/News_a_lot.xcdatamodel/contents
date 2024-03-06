@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Article" representedClassName="Article" syncable="YES">
+        <attribute name="articleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="articleImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleSubtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isArticleDeleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isGridImageDownloaded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isImageDownloaded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isThumbDownloaded" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Article" positionX="-63" positionY="-18" width="128" height="180"/>
+    </elements>
+</model>

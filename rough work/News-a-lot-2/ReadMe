@@ -1,0 +1,56 @@
+
+
+Project Name News-a-lot
+Created by Gagan Joshi
+Created for Momentous Technologies corp
+
+
+
+This is a test consists in developing an application that allows to see a catalog of articles.
+
+
+Storyboard is used for creation of UIViewContoller.
+Tab Bar Based application consists of three UIViewController
+
+1. ArticleListTVC - TableViewController
+
+         This shows all articles in the form of list.
+
+
+2. ArticleGridCVC - CollectionViewController
+
+        This shows all articles in the form of Grid.
+
+3. SettingsTVC    - TableViewController
+
+          Settings to change font of title and subtitle
+
+
+-----------------------------------------------
+
+ArticleDetailTVC  - shows Article Details
+
+-------------------------------------------
+
+Core Data
+
+One entitiy is used named Article
+------------------------------------------------
+
+Other than that there are some Helper Classes
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+

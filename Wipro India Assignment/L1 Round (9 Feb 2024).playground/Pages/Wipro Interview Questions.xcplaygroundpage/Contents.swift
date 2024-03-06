@@ -100,3 +100,4 @@ class SomeClass {
 SomeClass.someInt = 15
 
 print(SomeClass.someInt)
+

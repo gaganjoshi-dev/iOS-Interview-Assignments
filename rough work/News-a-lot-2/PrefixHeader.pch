@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  News-a-lot
+//
+//  Created by Gagan Joshi on 13/03/16.
+//  Copyright © 2016 Gagan Joshi. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppConstant.h"
+#import "PersistentStore.h"
+#import "Helper.h"
+#import "APICommunicator.h"
+
+
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+
+#endif /* PrefixHeader_pch */
